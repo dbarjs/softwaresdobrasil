@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<title>Softwares do Brasil</title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<main>
+
+	<h1>Bem vindo</h1>
+
+	<input type="text" id="user"/>
+	<input type="password" id="pass"/>
+	<input type="button" id="button"/>
+
+</main>
+
+<script>
+
+	document.getElementById('button').addEventListener('click', function() {
+
+		var data = {
+			name: document.getElementById('user').value,
+			pass: document.getElementById('pass').value
+		};
+
+		var request = new XMLHttpRequest();
+		request.open('POST', '/login', true);
+		request.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+		request.send(JSON.stringify(data));
+
+	});
+
+</script>
+  
+</html>
