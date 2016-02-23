@@ -16,6 +16,24 @@ app.use(stormpath.init(app, {
 			view: path.join(__dirname, 'views', 'login.jade')
 		},
 		register: {
+			fields: {
+				givenName: {
+					label: "Primeiro Nome",
+					placeholder: "Primeiro Nome"
+				},
+				surname: {
+					label: "Último Nome",
+					placeholder: "Último Nome",
+				},
+				email: {
+					label: "E-mail",
+					placeholder: "E-mail"
+				},
+				password: {
+					label: "Senha",
+					placeholder: "Senha"
+				}
+			},
 			view: path.join(__dirname, 'views', 'register.jade')
 		}
 	}
