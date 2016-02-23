@@ -35,6 +35,9 @@ app.use(stormpath.init(app, {
 				}
 			},
 			view: path.join(__dirname, 'views', 'register.jade')
+		},
+		forgotPassword: {
+			view: path.join(__dirname, 'views', 'forgot-password.jade')
 		}
 	}
 }));
